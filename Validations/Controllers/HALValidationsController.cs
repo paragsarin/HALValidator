@@ -18,11 +18,13 @@ namespace Validations.Controllers
     {
         private readonly ILogger<HALValidationsController> _logger;
         private readonly IConfiguration _cfg;
+        private readonly IHttpClientFactory _clientFactory;
 
-        public HALValidationsController(ILogger<HALValidationsController> logger,IConfiguration cfg)
+        public HALValidationsController(ILogger<HALValidationsController> logger,IConfiguration cfg, IHttpClientFactory clientFactory)
         {
             _logger = logger;
             _cfg = cfg;
+            _clientFactory = clientFactory;
         }
 
         [HttpPost]
@@ -34,11 +36,13 @@ namespace Validations.Controllers
             {
                 var path = request.URL;
                 Guard.Against.Null(path, nameof(path));
-                client = new HttpClient();
-                
                 string schemaPath = Path.Combine($"{AppDomain.CurrentDomain.BaseDirectory}/schema", _cfg.GetValue<string>("SchemaName"));
-                client.BaseAddress = new Uri(path);
+                client = _clientFactory.CreateClient();
                 client.DefaultRequestHeaders.Accept.Clear();
+                client.BaseAddress = new Uri(path);
+                Guard.Against.Null("Token", request.Headers["Authorization"]);
+                int Authorization = request.Headers["Authorization"].Trim().Length;
+                Guard.Against.Zero(Authorization, nameof(Authorization));
                 foreach (string key in request.Headers.Keys)
                 {
                     if (key.Trim() == "Authorization")
@@ -91,7 +95,7 @@ namespace Validations.Controllers
             }
             finally
             {
-                if (client != null) { client.Dispose(); }
+              
             }
             return Ok(validateResponse);
         }
