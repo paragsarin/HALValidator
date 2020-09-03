@@ -1,5 +1,5 @@
 
-[![GitHub license](https://img.shields.io/badge/license-apache-blue.svg)]() 
+[![GitHub license](https://img.shields.io/badge/License-GPLv3-blue.svg)]() 
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)]()
 
 # HAL API Validator
