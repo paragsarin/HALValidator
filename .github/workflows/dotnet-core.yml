@@ -17,12 +17,9 @@ jobs:
       uses: actions/setup-dotnet@v1
       with:
         dotnet-version: 3.1.301
-    - name: change folder
-      run:  cd validations
     - name: Install dependencies
-      run: dotnet restore
+      run: dotnet restore validations/validations.csproj
     
     - name: Build
-      run: dotnet build --configuration Release --no-restore
-    - name: Test
-      run: dotnet test --no-restore --verbosity normal
+      run: dotnet build validations/validations.csproj --configuration Release --no-restore
+
