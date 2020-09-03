@@ -1,4 +1,6 @@
-[![Actions Status](https://github.com/paragsarin/HALValidator/workflows/Build/badge.svg)](https://github.com/paragsarin/HALValidator/actions)
+
+[![Actions Status](https://github.com/RobDWaller/csp-generator/workflows/Build%20and%20Test/badge.svg)](https://github.com/RobDWaller/csp-generator/actions)
+
 [![GitHub license](https://img.shields.io/badge/License-GPLv3-blue.svg)]() 
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)]()
 
