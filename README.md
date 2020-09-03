@@ -57,9 +57,9 @@ dotnet run
 ````
 
 ### API will be available on port 5000 
-
+````bash
 http://localhost:5000/HALValidations
-
+````
 
 
 ## Docker Setup/Support
