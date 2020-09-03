@@ -1,9 +1,8 @@
-
+![Build Status](https://github.com/paragsarin/HALValidator/workflows/.NET%20Core/badge.svg?branch=github-actions) 
 [![GitHub license](https://img.shields.io/badge/License-GPLv3-blue.svg)]() 
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)]()
-![Build Status](https://github.com/paragsarin/HALValidator/workflows/.NET%20Core/badge.svg?branch=github-actions) 
 
-# HAL API Validator 
+# HAL API Validator  
 This Validator API exposes set of API restful endpoints for validating external HAL+JSON API to ensure their complaince with HAL+JSON resource API format.
 
 ## Usage
