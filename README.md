@@ -23,7 +23,7 @@ APIs that adopt HAL can be easily served and consumed using open source librarie
 
 ## Contributing
 
-Before opening new issues or pull requests, please refer to [CONTRIBUTING.MD
+All contributions are welcome
 
 ## Development Setup
 
