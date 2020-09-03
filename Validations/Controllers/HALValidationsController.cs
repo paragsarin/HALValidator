@@ -35,7 +35,8 @@ namespace Validations.Controllers
                 var path = request.URL;
                 Guard.Against.Null(path, nameof(path));
                 client = new HttpClient();
-                string schemaPath = Path.Combine($"{AppDomain.CurrentDomain.BaseDirectory}\\schema", _cfg.GetValue<string>("SchemaName"));
+                
+                string schemaPath = Path.Combine($"{AppDomain.CurrentDomain.BaseDirectory}/schema", _cfg.GetValue<string>("SchemaName"));
                 client.BaseAddress = new Uri(path);
                 client.DefaultRequestHeaders.Accept.Clear();
                 foreach (string key in request.Headers.Keys)
