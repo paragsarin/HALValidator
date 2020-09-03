@@ -32,7 +32,7 @@ namespace Validations.Controllers
             ValidateResponse validateResponse = null;
             try
             {
-                var path = request.URL;
+                //var path = request.URL;
                 Guard.Against.Null(path, nameof(path));
                 client = new HttpClient();
                 string schemaPath = Path.Combine($"{AppDomain.CurrentDomain.BaseDirectory}\\schema", _cfg.GetValue<string>("SchemaName"));
