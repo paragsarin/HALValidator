@@ -5,9 +5,7 @@ on:
     branches: [ master ]
   pull_request:
     branches: [ master ]
-defaults:
-  run:
-    working-directory: validations
+
 jobs:
   build:
 
@@ -24,5 +22,4 @@ jobs:
     
     - name: Build
       run: dotnet build --configuration Release --no-restore
-    - name: Test
-      run: dotnet test --no-restore --verbosity normal
+
