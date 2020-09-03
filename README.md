@@ -1,4 +1,5 @@
-[![Actions Status](https://github.com/paragsarin/HALValidator/workflows/Build/badge.svg)(https://github.com/paragsarin/HALValidator/Build)
+[![Actions Status](https://github.com/paragsarin/HALValidator/workflows/Build/badge.svg)](https://github.com/paragsarin/HALValidator/Build)
+
 [![GitHub license](https://img.shields.io/badge/License-GPLv3-blue.svg)]() 
 [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)]()
 
