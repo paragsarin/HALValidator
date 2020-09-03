@@ -1,0 +1,689 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema",
+  "$id": "",
+  "type": "object",
+  "title": "The root schema",
+  "description": "The root schema comprises the entire JSON document.",
+  "default": {},
+  "examples": [
+    {
+      "count": 25,
+      "total": 50,
+      "_links": {
+        "self": {
+          "href": "https://localhost/anyapi/codestable/PRIMARY_LOCATION/codes?start=0"
+        },
+        "first": {
+          "href": "https://localhost/anyapi/codestable/PRIMARY_LOCATION/codes?start=0"
+        },
+        "prev": {
+          "href": null
+        },
+        "next": {
+          "href": "https://localhost/anyapi/codestable/PRIMARY_LOCATION/codes?start=1"
+        },
+        "last": {
+          "href": "https://localhost/anyapi/codestable/PRIMARY_LOCATION/codes?start=1"
+        }
+      },
+      "_embedded": {
+        "codes": [
+          {
+            "shortCode": "B",
+            "desc": "Breezway",
+            "id": 2352,
+            "relatedCodeId": 0,
+            "parentCode": "   ",
+            "parentDesc": ""
+          },
+          {
+            "shortCode": "BA",
+            "desc": "Bathroom/Public",
+            "id": 119,
+            "relatedCodeId": 0,
+            "parentCode": "   ",
+            "parentDesc": ""
+          },
+          {
+            "shortCode": "BA",
+            "desc": "Basketball Court",
+            "id": 6449,
+            "relatedCodeId": 0,
+            "parentCode": "   ",
+            "parentDesc": ""
+          },
+          {
+            "shortCode": "BL",
+            "desc": "Balcony",
+            "id": 6454,
+            "relatedCodeId": 0,
+            "parentCode": "   ",
+            "parentDesc": ""
+          },
+          {
+            "shortCode": "CA",
+            "desc": "Car, Van/Automobile",
+            "id": 121,
+            "relatedCodeId": 0,
+            "parentCode": "   ",
+            "parentDesc": ""
+          },
+          {
+            "shortCode": "CG",
+            "desc": "Community - General",
+            "id": 6460,
+            "relatedCodeId": 0,
+            "parentCode": "   ",
+            "parentDesc": ""
+          },
+          {
+            "shortCode": "CH",
+            "desc": "Clubhouse",
+            "id": 122,
+            "relatedCodeId": 0,
+            "parentCode": "   ",
+            "parentDesc": ""
+          },
+          {
+            "shortCode": "CMA",
+            "desc": "Common Area",
+            "id": 126,
+            "relatedCodeId": 0,
+            "parentCode": "   ",
+            "parentDesc": ""
+          },
+          {
+            "shortCode": "DP",
+            "desc": "Dog Park",
+            "id": 2348,
+            "relatedCodeId": 0,
+            "parentCode": "   ",
+            "parentDesc": ""
+          },
+          {
+            "shortCode": "DW",
+            "desc": "Driveway",
+            "id": 123,
+            "relatedCodeId": 0,
+            "parentCode": "   ",
+            "parentDesc": ""
+          },
+          {
+            "shortCode": "EL",
+            "desc": "Elevator",
+            "id": 124,
+            "relatedCodeId": 0,
+            "parentCode": "   ",
+            "parentDesc": ""
+          },
+          {
+            "shortCode": "ER",
+            "desc": "Exercise Room",
+            "id": 120,
+            "relatedCodeId": 0,
+            "parentCode": "   ",
+            "parentDesc": ""
+          },
+          {
+            "shortCode": "ESC",
+            "desc": "Escalator",
+            "id": 2350,
+            "relatedCodeId": 0,
+            "parentCode": "   ",
+            "parentDesc": ""
+          },
+          {
+            "shortCode": "GPE",
+            "desc": "Gate - Pedestrian",
+            "id": 6451,
+            "relatedCodeId": 0,
+            "parentCode": "   ",
+            "parentDesc": ""
+          },
+          {
+            "shortCode": "GPO",
+            "desc": "Gate - Pool",
+            "id": 6452,
+            "relatedCodeId": 0,
+            "parentCode": "   ",
+            "parentDesc": ""
+          },
+          {
+            "shortCode": "GR",
+            "desc": "Game Room",
+            "id": 6442,
+            "relatedCodeId": 0,
+            "parentCode": "   ",
+            "parentDesc": ""
+          },
+          {
+            "shortCode": "GV",
+            "desc": "Gate - Vehicle",
+            "id": 6450,
+            "relatedCodeId": 0,
+            "parentCode": "   ",
+            "parentDesc": ""
+          },
+          {
+            "shortCode": "HA",
+            "desc": "Hallway/Corridor",
+            "id": 125,
+            "relatedCodeId": 0,
+            "parentCode": "   ",
+            "parentDesc": ""
+          },
+          {
+            "shortCode": "IV",
+            "desc": "Inside Vehicle",
+            "id": 131,
+            "relatedCodeId": 0,
+            "parentCode": "   ",
+            "parentDesc": ""
+          },
+          {
+            "shortCode": "JB",
+            "desc": "Juilette Balcony",
+            "id": 6453,
+            "relatedCodeId": 0,
+            "parentCode": "   ",
+            "parentDesc": ""
+          },
+          {
+            "shortCode": "L",
+            "desc": "Lobby",
+            "id": 135,
+            "relatedCodeId": 0,
+            "parentCode": "   ",
+            "parentDesc": ""
+          },
+          {
+            "shortCode": "LK",
+            "desc": "Lake",
+            "id": 6444,
+            "relatedCodeId": 0,
+            "parentCode": "   ",
+            "parentDesc": ""
+          },
+          {
+            "shortCode": "LO",
+            "desc": "Leasing Office",
+            "id": 6446,
+            "relatedCodeId": 0,
+            "parentCode": "   ",
+            "parentDesc": ""
+          },
+          {
+            "shortCode": "LR",
+            "desc": "Laundry Room",
+            "id": 2522,
+            "relatedCodeId": 0,
+            "parentCode": "   ",
+            "parentDesc": ""
+          },
+          {
+            "shortCode": "LS",
+            "desc": "Landscaping",
+            "id": 6457,
+            "relatedCodeId": 0,
+            "parentCode": "   ",
+            "parentDesc": ""
+          }
+        ]
+      },
+      "start": 0,
+      "currentPageNumber": 0
+    }
+  ],
+  "required": [
+    "count",
+    "total",
+    "_links",
+    "_embedded",
+    "start",
+    "currentPageNumber"
+  ],
+  "properties": {
+    "count": {
+      "$id": "#/properties/count",
+      "type": "integer",
+      "title": "The count schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": 0,
+      "examples": [
+        25
+      ]
+    },
+    "total": {
+      "$id": "#/properties/total",
+      "type": "integer",
+      "title": "The total schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": 0,
+      "examples": [
+        50
+      ]
+    },
+    "_links": {
+      "$id": "#/properties/_links",
+      "type": "object",
+      "title": "The _links schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": {},
+      "examples": [
+        {
+          "self": {
+            "href": "https://localhost/anyapi/codestable/PRIMARY_LOCATION/codes?start=0"
+          },
+          "first": {
+            "href": "https://localhost/anyapi/codestable/PRIMARY_LOCATION/codes?start=0"
+          },
+          "prev": {
+            "href": null
+          },
+          "next": {
+            "href": "https://localhost/anyapi/codestable/PRIMARY_LOCATION/codes?start=1"
+          },
+          "last": {
+            "href": "https://localhost/anyapi/codestable/PRIMARY_LOCATION/codes?start=1"
+          }
+        }
+      ],
+      "required": [
+        "self",
+        "first",
+        "prev",
+        "next",
+        "last"
+      ],
+      "properties": {
+        "self": {
+          "$id": "#/properties/_links/properties/self",
+          "type": "object",
+          "title": "The self schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": {},
+          "examples": [
+            {
+              "href": "https://localhost/anyapi/codestable/PRIMARY_LOCATION/codes?start=0"
+            }
+          ],
+          "required": [
+            "href"
+          ],
+          "properties": {
+            "href": {
+              "$id": "#/properties/_links/properties/self/properties/href",
+              "type": "string",
+              "title": "The href schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "https://localhost/anyapi/codestable/PRIMARY_LOCATION/codes?start=0"
+              ]
+            }
+          },
+          "additionalProperties": true
+        },
+        "first": {
+          "$id": "#/properties/_links/properties/first",
+          "type": "object",
+          "title": "The first schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": {},
+          "examples": [
+            {
+              "href": "https://localhost/anyapi/codestable/PRIMARY_LOCATION/codes?start=0"
+            }
+          ],
+          "required": [
+            "href"
+          ],
+          "properties": {
+            "href": {
+              "$id": "#/properties/_links/properties/first/properties/href",
+              "type": "string",
+              "title": "The href schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "https://localhost/anyapi/codestable/PRIMARY_LOCATION/codes?start=0"
+              ]
+            }
+          },
+          "additionalProperties": true
+        },
+        "prev": {
+          "$id": "#/properties/_links/properties/prev",
+          "type": "object",
+          "title": "The prev schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": {},
+          "examples": [
+            {
+              "href": null
+            }
+          ],
+          "required": [
+            "href"
+          ],
+          "properties": {
+            "href": {
+              "$id": "#/properties/_links/properties/prev/properties/href",
+              "type": [ "string", "null" ],
+              "title": "The href schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": null,
+              "examples": [
+                null
+              ]
+            }
+          },
+          "additionalProperties": true
+        },
+        "next": {
+          "$id": "#/properties/_links/properties/next",
+          "type": "object",
+          "title": "The next schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": {},
+          "examples": [
+            {
+              "href": "https://localhost/anyapi/codestable/PRIMARY_LOCATION/codes?start=1"
+            }
+          ],
+          "required": [
+            "href"
+          ],
+          "properties": {
+            "href": {
+              "$id": "#/properties/_links/properties/next/properties/href",
+              "type": [ "string", "null" ],
+              "title": "The href schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": null,
+              "examples": [
+                "https://localhost/anyapi/codestable/PRIMARY_LOCATION/codes?start=1"
+              ]
+            }
+          },
+          "additionalProperties": true
+        },
+        "last": {
+          "$id": "#/properties/_links/properties/last",
+          "type": "object",
+          "title": "The last schema",
+          "description": "An explanation about the purpose of this instance.",
+          "default": {},
+          "examples": [
+            {
+              "href": "https://localhost/anyapi/codestable/PRIMARY_LOCATION/codes?start=1"
+            }
+          ],
+          "required": [
+            "href"
+          ],
+          "properties": {
+            "href": {
+              "$id": "#/properties/_links/properties/last/properties/href",
+              "type": "string",
+              "title": "The href schema",
+              "description": "An explanation about the purpose of this instance.",
+              "default": "",
+              "examples": [
+                "https://localhost/anyapi/codestable/PRIMARY_LOCATION/codes?start=1"
+              ]
+            }
+          },
+          "additionalProperties": true
+        }
+      },
+      "additionalProperties": true
+    },
+    "_embedded": {
+      "$id": "#/properties/_embedded",
+      "type": "object",
+      "title": "The _embedded schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": {},
+      "examples": [
+        {
+          "codes": [
+            {
+              "shortCode": "B",
+              "desc": "Breezway",
+              "id": 2352,
+              "relatedCodeId": 0,
+              "parentCode": "   ",
+              "parentDesc": ""
+            },
+            {
+              "shortCode": "BA",
+              "desc": "Bathroom/Public",
+              "id": 119,
+              "relatedCodeId": 0,
+              "parentCode": "   ",
+              "parentDesc": ""
+            },
+            {
+              "shortCode": "BA",
+              "desc": "Basketball Court",
+              "id": 6449,
+              "relatedCodeId": 0,
+              "parentCode": "   ",
+              "parentDesc": ""
+            },
+            {
+              "shortCode": "BL",
+              "desc": "Balcony",
+              "id": 6454,
+              "relatedCodeId": 0,
+              "parentCode": "   ",
+              "parentDesc": ""
+            },
+            {
+              "shortCode": "CA",
+              "desc": "Car, Van/Automobile",
+              "id": 121,
+              "relatedCodeId": 0,
+              "parentCode": "   ",
+              "parentDesc": ""
+            },
+            {
+              "shortCode": "CG",
+              "desc": "Community - General",
+              "id": 6460,
+              "relatedCodeId": 0,
+              "parentCode": "   ",
+              "parentDesc": ""
+            },
+            {
+              "shortCode": "CH",
+              "desc": "Clubhouse",
+              "id": 122,
+              "relatedCodeId": 0,
+              "parentCode": "   ",
+              "parentDesc": ""
+            },
+            {
+              "shortCode": "CMA",
+              "desc": "Common Area",
+              "id": 126,
+              "relatedCodeId": 0,
+              "parentCode": "   ",
+              "parentDesc": ""
+            },
+            {
+              "shortCode": "DP",
+              "desc": "Dog Park",
+              "id": 2348,
+              "relatedCodeId": 0,
+              "parentCode": "   ",
+              "parentDesc": ""
+            },
+            {
+              "shortCode": "DW",
+              "desc": "Driveway",
+              "id": 123,
+              "relatedCodeId": 0,
+              "parentCode": "   ",
+              "parentDesc": ""
+            },
+            {
+              "shortCode": "EL",
+              "desc": "Elevator",
+              "id": 124,
+              "relatedCodeId": 0,
+              "parentCode": "   ",
+              "parentDesc": ""
+            },
+            {
+              "shortCode": "ER",
+              "desc": "Exercise Room",
+              "id": 120,
+              "relatedCodeId": 0,
+              "parentCode": "   ",
+              "parentDesc": ""
+            },
+            {
+              "shortCode": "ESC",
+              "desc": "Escalator",
+              "id": 2350,
+              "relatedCodeId": 0,
+              "parentCode": "   ",
+              "parentDesc": ""
+            },
+            {
+              "shortCode": "GPE",
+              "desc": "Gate - Pedestrian",
+              "id": 6451,
+              "relatedCodeId": 0,
+              "parentCode": "   ",
+              "parentDesc": ""
+            },
+            {
+              "shortCode": "GPO",
+              "desc": "Gate - Pool",
+              "id": 6452,
+              "relatedCodeId": 0,
+              "parentCode": "   ",
+              "parentDesc": ""
+            },
+            {
+              "shortCode": "GR",
+              "desc": "Game Room",
+              "id": 6442,
+              "relatedCodeId": 0,
+              "parentCode": "   ",
+              "parentDesc": ""
+            },
+            {
+              "shortCode": "GV",
+              "desc": "Gate - Vehicle",
+              "id": 6450,
+              "relatedCodeId": 0,
+              "parentCode": "   ",
+              "parentDesc": ""
+            },
+            {
+              "shortCode": "HA",
+              "desc": "Hallway/Corridor",
+              "id": 125,
+              "relatedCodeId": 0,
+              "parentCode": "   ",
+              "parentDesc": ""
+            },
+            {
+              "shortCode": "IV",
+              "desc": "Inside Vehicle",
+              "id": 131,
+              "relatedCodeId": 0,
+              "parentCode": "   ",
+              "parentDesc": ""
+            },
+            {
+              "shortCode": "JB",
+              "desc": "Juilette Balcony",
+              "id": 6453,
+              "relatedCodeId": 0,
+              "parentCode": "   ",
+              "parentDesc": ""
+            },
+            {
+              "shortCode": "L",
+              "desc": "Lobby",
+              "id": 135,
+              "relatedCodeId": 0,
+              "parentCode": "   ",
+              "parentDesc": ""
+            },
+            {
+              "shortCode": "LK",
+              "desc": "Lake",
+              "id": 6444,
+              "relatedCodeId": 0,
+              "parentCode": "   ",
+              "parentDesc": ""
+            },
+            {
+              "shortCode": "LO",
+              "desc": "Leasing Office",
+              "id": 6446,
+              "relatedCodeId": 0,
+              "parentCode": "   ",
+              "parentDesc": ""
+            },
+            {
+              "shortCode": "LR",
+              "desc": "Laundry Room",
+              "id": 2522,
+              "relatedCodeId": 0,
+              "parentCode": "   ",
+              "parentDesc": ""
+            },
+            {
+              "shortCode": "LS",
+              "desc": "Landscaping",
+              "id": 6457,
+              "relatedCodeId": 0,
+              "parentCode": "   ",
+              "parentDesc": ""
+            }
+          ]
+        }
+      ],
+
+      "patternProperties": {
+        "^.*$": {
+          "anyOf": [
+            { "type": "array" }
+          ]
+        }
+      },
+
+
+
+      "additionalProperties": true
+    },
+    "start": {
+      "$id": "#/properties/start",
+      "type": "integer",
+      "title": "The start schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": 0,
+      "examples": [
+        0
+      ]
+    },
+    "currentPageNumber": {
+      "$id": "#/properties/currentPageNumber",
+      "type": "integer",
+      "title": "The currentPageNumber schema",
+      "description": "An explanation about the purpose of this instance.",
+      "default": 0,
+      "examples": [
+        0
+      ]
+    }
+  },
+  "additionalProperties": true
+}
