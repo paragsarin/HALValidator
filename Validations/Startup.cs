@@ -30,6 +30,7 @@ namespace Validations
         public void ConfigureServices(IServiceCollection services)
         {
             services.InstallServicesInAssembly(Configuration);
+            //Hello this looks ok for me
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
