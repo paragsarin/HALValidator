@@ -235,12 +235,10 @@
     }
   ],
   "required": [
-    "count",
-    "total",
+   
     "_links",
-    "_embedded",
-    "start",
-    "currentPageNumber"
+    "_embedded"
+   
   ],
   "properties": {
     "count": {
@@ -290,10 +288,7 @@
       ],
       "required": [
         "self",
-        "first",
-        "prev",
-        "next",
-        "last"
+        "first"
       ],
       "properties": {
         "self": {
