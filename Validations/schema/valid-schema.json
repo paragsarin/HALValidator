@@ -17,7 +17,7 @@
           "href": "https://localhost/anyapi/codestable/PRIMARY_LOCATION/codes?start=0"
         },
         "prev": {
-          "href": null
+          "href": "https://localhost/anyapi/codestable/PRIMARY_LOCATION/codes?start=0"
         },
         "next": {
           "href": "https://localhost/anyapi/codestable/PRIMARY_LOCATION/codes?start=1"
@@ -287,8 +287,7 @@
         }
       ],
       "required": [
-        "self",
-        "first"
+        "self"
       ],
       "properties": {
         "self": {
