@@ -29,6 +29,5 @@ jobs:
        image: paragsarin/halvalidator
        tag: latest
        registry: docker.io
-       dockerfile: /home/runner/work/HALValidator/HALValidator/Dockerfile
        username: ${{ secrets.DOCKER_USERNAME }}
        password: ${{ secrets.DOCKER_PASSWORD }}
