@@ -22,6 +22,7 @@ pipeline {
 	    
 	    stage ("Pull base images") {	
 		  steps {
+			   script {
 			   env.WORKDIR = "${env.WORKSPACE}"
 			     echo "${env.WORKDIR}"
 			    echo "${env.DOCKER_REGISTRY_CREDENTIAL}"
@@ -29,7 +30,7 @@ pipeline {
 			  //bat "docker system prune -f -a"
 			  bat "docker login --username \"${env.DOCKER_REGISTRY_AUTH_USERNAME}\" --password \"${env.DOCKER_REGISTRY_AUTH_PASSWORD}\"" 
 			  bat "docker pull ${env.BUILD_IMAGE}"
-			
+			   }
 		     }			
 		}
         stage('Test') {
