@@ -11,6 +11,7 @@ pipeline {
            GITHUB_DXC_CREDENTIALS=credentials('githubauth')
            GITHUB_DXC_CREDENTIALS_USERNAME="%DOCKER_REGISTRY_CREDENTIAL_USR%"
            GITHUB_DXC_CREDENTIALS_PWD="%DOCKER_REGISTRY_CREDENTIAL_PSW%"
+	    CHECKOUT_BRANCH="master"
 	}
 
     stages {
