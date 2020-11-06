@@ -22,6 +22,8 @@ pipeline {
 	    
 	    stage ("Pull base images") {	
 		  steps {
+			   env.WORKDIR = "${env.WORKSPACE}"
+			     echo "${env.WORKDIR}"
 			    echo "${env.DOCKER_REGISTRY_CREDENTIAL}"
 			    echo "${env.DOCKER_REGISTRY_CREDENTIAL_PSW}"
 			  //bat "docker system prune -f -a"
