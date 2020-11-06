@@ -38,10 +38,10 @@ pipeline {
                 bat "docker tag ${env.BUILD_IMAGE} ${env.LOCAL_BUILD_IMAGE}"
                 bat "docker run --name buildcontainer_${env.BUILD_NUMBER} -e rusername=\"${env.GITHUB_DXC_CREDENTIALS_USERNAME}\" -e rpassword=\"${env.GITHUB_DXC_CREDENTIALS_PWD}\" -e AUTH_USERNAME=\"${env.DOCKER_REGISTRY_AUTH_USERNAME}\" -e AUTH_PASSWORD=\"${env.DOCKER_REGISTRY_AUTH_PASSWORD}\" -e BUILD_NUMBER=${env.BUILD_NUMBER} -w /src -d -it ${env.LOCAL_BUILD_IMAGE}" 
           		bat "docker exec buildcontainer_${env.BUILD_NUMBER} git clone --single-branch -b ${env.CHECKOUT_BRANCH} --depth=1 https://github.com/paragsarin/HALValidator.git"
-				   bat "docker exec buildcontainer_${env.BUILD_NUMBER} bash -c 'cd HALValidator/Validations'"
+				   bat "docker exec buildcontainer_${env.BUILD_NUMBER} bash -c ""cd HALValidator/Validations"""
 				   bat "docker exec buildcontainer_${env.BUILD_NUMBER} dotnet restore Validations.csproj"
 				   bat "docker exec buildcontainer_${env.BUILD_NUMBER}  dotnet build "Validations.csproj" -c Release -o /app/build"
-				    bat "docker exec buildcontainer_${env.BUILD_NUMBER} bash -c  'cd /app/build'"
+				    bat "docker exec buildcontainer_${env.BUILD_NUMBER} bash -c ""cd /app/build"""
 				    bat "docker cp buildcontainer_${env.BUILD_NUMBER}:app/build ."
 				   
 				   
