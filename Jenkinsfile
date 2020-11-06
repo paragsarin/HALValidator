@@ -40,7 +40,7 @@ pipeline {
           		bat "docker exec buildcontainer_${env.BUILD_NUMBER} git clone --single-branch -b ${env.CHECKOUT_BRANCH} --depth=1 https://github.com/paragsarin/HALValidator.git"
 				   bat "docker exec buildcontainer_${env.BUILD_NUMBER} bash -c \"cd HALValidator/Validations\""
 				   bat "docker exec buildcontainer_${env.BUILD_NUMBER} dotnet restore HALValidator/Validations/Validations.csproj"
-				   bat "docker exec buildcontainer_${env.BUILD_NUMBER}  dotnet build "HALValidator/Validations/Validations.csproj" -c Release -o /app/build"
+				   bat "docker exec buildcontainer_${env.BUILD_NUMBER}  dotnet build HALValidator/Validations/Validations.csproj -c Release -o /app/build"
 				    bat "docker exec buildcontainer_${env.BUILD_NUMBER} bash -c \"cd /app/build\""
 				    bat "docker cp buildcontainer_${env.BUILD_NUMBER}:app/build ."
 				   
