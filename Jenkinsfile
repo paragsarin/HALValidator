@@ -25,8 +25,8 @@ pipeline {
 			    echo "${env.DOCKER_REGISTRY_CREDENTIAL}"
 			    echo "${env.DOCKER_REGISTRY_CREDENTIAL_PSW}"
 			  //bat "docker system prune -f -a"
-			  bat "docker login ${env.DOCKER_REGISTRY} --username \"${env.DOCKER_REGISTRY_AUTH_USERNAME}\" --password \"${env.DOCKER_REGISTRY_AUTH_PASSWORD}\"" 
-			  bat "docker pull ${env.DOCKER_REGISTRY}/${env.BUILD_IMAGE}"
+			  bat "docker login --username \"${env.DOCKER_REGISTRY_AUTH_USERNAME}\" --password \"${env.DOCKER_REGISTRY_AUTH_PASSWORD}\"" 
+			  bat "docker pull ${env.BUILD_IMAGE}"
 			
 		     }			
 		}
