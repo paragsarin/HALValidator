@@ -43,13 +43,14 @@ script {
                 echo 'Deploying....Parag'
             }
         }
-	    post 
+	  
+    }
+  post 
 			{	
 			   always 
 				{
 					echo 'Cleanup windows items'
 					bat "docker logout hub.docker.com"
 				}
-			}
-    }
+			}	
 }
