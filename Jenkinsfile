@@ -3,8 +3,10 @@ pipeline {
     environment {
 		DOCKER_REGISTRY='hub.docker.com'
 		DOCKER_REGISTRY_PROTOCOL='https'
-		DOCKER_REGISTRY_CREDENTIAL='riskmaster-jenkins-ci'
-	    RM_BUILD_IMAGE='mcr.microsoft.com/windows/nanoserver:10.0.14393.953'      
+		DOCKER_REGISTRY_CREDENTIAL= credentials('riskmaster-jenkins-ci')
+	        BUILD_IMAGE='paragsarin/halvalidator:1.1'    
+	    	DOCKER_REGISTRY_AUTH_USERNAME="%DOCKER_REGISTRY_CREDENTIAL_USR%"
+   		DOCKER_REGISTRY_AUTH_PASSWORD="%DOCKER_REGISTRY_CREDENTIAL_PSW%"
 	}
 
     stages {
@@ -17,6 +19,15 @@ pipeline {
               
             }
         }
+	    
+	    stage ("Pull base images") {	
+		  steps {
+			  //bat "docker system prune -f -a"
+			  bat "docker login ${env.DOCKER_REGISTRY} --username \"${env.DOCKER_REGISTRY_AUTH_USERNAME}\" --password \"${env.DOCKER_REGISTRY_AUTH_PASSWORD}\"" 
+			  bat "docker pull ${env.DOCKER_REGISTRY}/${env.BUILD_IMAGE}"
+			
+		     }			
+		}
         stage('Test') {
             steps {
             
@@ -32,5 +43,13 @@ script {
                 echo 'Deploying....Parag'
             }
         }
+	    post 
+			{	
+			   always 
+				{
+					echo 'Cleanup windows items'
+					bat "docker logout hub.docker.com"
+				}
+			}
     }
 }
