@@ -66,8 +66,7 @@ pipeline {
           				 bat "docker cp ./publish deploycontainer_${env.BUILD_NUMBER}:/"
 				    bat "docker stop deploycontainer_${env.BUILD_NUMBER}"
 					 bat "docker commit --change \"ENV AUTH_USERNAME=BLANK AUTH_PASSWORD=BLANK\" deploycontainer_${env.BUILD_NUMBER} deploycontainernew_${env.BUILD_NUMBER}"
-					 bat "docker tag deploycontainernew_${env.BUILD_NUMBER} ${env.BUILD_NUMBER}"
-					 bat "docker login ${env.DOCKER_REGISTRY} --username \"${env.DOCKER_REGISTRY_AUTH_USERNAME}\" --password \"${env.DOCKER_REGISTRY_AUTH_PASSWORD}\"" 
+					 bat "docker tag deploycontainernew_${env.BUILD_NUMBER} ${env.DEPLOY_IMAGE}"
 					 bat "docker push ${env.DEPLOY_IMAGE}"
 				   
 			   }
