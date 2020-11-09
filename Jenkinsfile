@@ -49,6 +49,7 @@ pipeline {
 				    bat "docker exec buildcontainer_${env.BUILD_NUMBER}  dotnet publish HALValidator/Validations/Validations.csproj -c Release -o /app/publish"
 				    bat "docker exec buildcontainer_${env.BUILD_NUMBER} bash -c \"cd /app/publish\""
 				    bat "docker cp buildcontainer_${env.BUILD_NUMBER}:app/publish ."
+				     bat "docker rm -f buildcontainer_${env.BUILD_NUMBER}" 
 				   
 				   
 			   }
@@ -73,6 +74,7 @@ pipeline {
 					// bat "docker commit deploycontainer_${env.BUILD_NUMBER} deploycontainernew_${env.BUILD_NUMBER}"
 					 bat "docker tag deploycontainernew_${env.BUILD_NUMBER} ${env.DEPLOY_IMAGE}"
 					 bat "docker push ${env.DEPLOY_IMAGE}"
+				 
 				   
 			   }
 		     }			
