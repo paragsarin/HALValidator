@@ -82,7 +82,7 @@ pipeline {
 					steps {
 						echo 'deploy ecs container service'
 						withCredentials([[$class: 'AmazonWebServicesCredentialsBinding', accessKeyVariable: 'AWS_ACCESS_KEY_ID', credentialsId: 'awscrdentials', secretKeyVariable: 'AWS_SECRET_ACCESS_KEY']]) {
-							bat "\"C:\\Program Files\\Amazon\\\AWSCLIV2\\aws.exe\" ecs update-service --service ${env.ECS_WEB_API_SERVICE_NAME}  --cluster ${env.ECS_CLUSTER_NAME} --region ${env.AWS_DEFAULT_REGION} --force-new-deployment"
+							bat "\"C:\\Program Files\\Amazon\\AWSCLIV2\\aws.exe\" ecs update-service --service ${env.ECS_WEB_API_SERVICE_NAME}  --cluster ${env.ECS_CLUSTER_NAME} --region ${env.AWS_DEFAULT_REGION} --force-new-deployment"
 						}
 						sleep(time:60,unit:"SECONDS")
 						
