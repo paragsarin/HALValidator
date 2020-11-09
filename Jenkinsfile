@@ -59,7 +59,7 @@ pipeline {
 			    echo "${env.DOCKER_REGISTRY_CREDENTIAL}"
 			    echo "${env.DOCKER_REGISTRY_CREDENTIAL_PSW}"
 			  //bat "docker system prune -f -a"
-				    bat "rmdir ./publish/Properties"
+				    bat "rmdir \"./publish/Properties\""
 			  bat "docker login --username \"${env.DOCKER_REGISTRY_AUTH_USERNAME}\" --password \"${env.DOCKER_REGISTRY_AUTH_PASSWORD}\"" 
 			  bat "docker pull ${env.DEPLOY_IMAGE}"
                 bat "docker tag ${env.DEPLOY_IMAGE} ${env.LOCAL_DEPLOY_IMAGE}"
