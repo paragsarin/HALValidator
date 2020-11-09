@@ -62,7 +62,7 @@ pipeline {
 				 //   bat "rmdir /s /q \"./publish/Properties\""
 			  bat "docker login --username \"${env.DOCKER_REGISTRY_AUTH_USERNAME}\" --password \"${env.DOCKER_REGISTRY_AUTH_PASSWORD}\"" 
 			//  bat "docker pull ${env.DEPLOY_IMAGE}"
-				   bat "docker build ."
+				   bat "docker build -t deploycontainernew_${env.BUILD_NUMBER} ."
                // bat "docker tag ${env.DEPLOY_IMAGE} ${env.LOCAL_DEPLOY_IMAGE}"
                 //bat "docker run --name deploycontainer_${env.BUILD_NUMBER} -d -it ${env.LOCAL_BUILD_IMAGE}" 
           				// bat "docker cp ./publish deploycontainer_${env.BUILD_NUMBER}:/"
