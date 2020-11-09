@@ -5,7 +5,7 @@ pipeline {
 		DOCKER_REGISTRY_PROTOCOL='https'
 		DOCKER_REGISTRY_CREDENTIAL= credentials('riskmaster-jenkins-ci')
 	        BUILD_IMAGE='mcr.microsoft.com/dotnet/core/sdk:3.1-buster'  
-	        DEPLOY_IMAGE='paragsarin/validateapiweb'  
+	        DEPLOY_IMAGE='paragsarin/testrepo'  
             LOCAL_BUILD_IMAGE='builder'      
 	    LOCAL_DEPLOY_IMAGE='deployer' 
 	    	DOCKER_REGISTRY_AUTH_USERNAME="%DOCKER_REGISTRY_CREDENTIAL_USR%"
@@ -66,7 +66,7 @@ pipeline {
                 bat "docker run --name deploycontainer_${env.BUILD_NUMBER} -d -it ${env.LOCAL_BUILD_IMAGE}" 
           				 bat "docker cp ./publish deploycontainer_${env.BUILD_NUMBER}:/"
 				    //bat "docker stop deploycontainer_${env.BUILD_NUMBER}"
-					 bat "docker commit --change='ENTRYPOINT [\"dotnet\", \"Validation.dll\"]' deploycontainer_${env.BUILD_NUMBER} deploycontainernew_${env.BUILD_NUMBER}"
+					 bat "docker commit deploycontainer_${env.BUILD_NUMBER} deploycontainernew_${env.BUILD_NUMBER}"
 					 bat "docker tag deploycontainernew_${env.BUILD_NUMBER} ${env.DEPLOY_IMAGE}"
 					 bat "docker push ${env.DEPLOY_IMAGE}"
 				   
