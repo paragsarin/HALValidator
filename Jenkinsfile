@@ -14,6 +14,9 @@ pipeline {
            GITHUB_DXC_CREDENTIALS_USERNAME="%DOCKER_REGISTRY_CREDENTIAL_USR%"
            GITHUB_DXC_CREDENTIALS_PWD="%DOCKER_REGISTRY_CREDENTIAL_PSW%"
 	    CHECKOUT_BRANCH="master"
+	    ECS_CLUSTER_NAME = 'EC2'
+	    ECS_WEB_API_SERVICE_NAME = 'validationservice'
+	    AWS_DEFAULT_REGION='us-west-2'
 	}
 
     stages {
@@ -74,6 +77,21 @@ pipeline {
 			   }
 		     }			
 		}
+	    
+	    stage('deploy ecs container service') {
+					steps {
+						echo 'deploy ecs container service'
+						withCredentials([[$class: 'AmazonWebServicesCredentialsBinding', accessKeyVariable: 'AWS_ACCESS_KEY_ID', credentialsId: 'awscrdentials', secretKeyVariable: 'AWS_SECRET_ACCESS_KEY']]) {
+							bat "\"C:\\Program Files\\Amazon\\\AWSCLIV2\\aws.exe\" ecs update-service --service ${env.ECS_WEB_API_SERVICE_NAME}  --cluster ${env.ECS_CLUSTER_NAME} --region ${env.AWS_DEFAULT_REGION} --force-new-deployment"
+						}
+						sleep(time:60,unit:"SECONDS")
+						
+						//withCredentials([[$class: 'AmazonWebServicesCredentialsBinding', accessKeyVariable: 'AWS_ACCESS_KEY_ID', credentialsId: '07d39f8a-1812-429b-ac59-ff8a1f6a4314', secretKeyVariable: 'AWS_SECRET_ACCESS_KEY']]) {
+						  //  bat "\"C:\\Program Files\\Amazon\\AWSCLI\\bin\\aws.exe\" ecs update-service --service ${env.ECS_WEB_API_SERVICE_NAME}  --cluster ${env.ECS_CLUSTER_NAME} --region ${env.AWS_DEFAULT_REGION} --desired-count ${env.ECS_DESIRED_TASK_COUNT}"
+						//}
+						
+					}
+				}
         stage('Test') {
             steps {
             
