@@ -5,7 +5,7 @@ pipeline {
 		DOCKER_REGISTRY_PROTOCOL='https'
 		DOCKER_REGISTRY_CREDENTIAL= credentials('riskmaster-jenkins-ci')
 	        BUILD_IMAGE='mcr.microsoft.com/dotnet/core/sdk:3.1-buster'  
-	        DEPLOY_IMAGE='paragsarin/validationweb'  
+	        DEPLOY_IMAGE='paragsarin/validationapiweb'  
             LOCAL_BUILD_IMAGE='builder'      
 	    LOCAL_DEPLOY_IMAGE='deployer' 
 	    	DOCKER_REGISTRY_AUTH_USERNAME="%DOCKER_REGISTRY_CREDENTIAL_USR%"
