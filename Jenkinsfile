@@ -86,7 +86,7 @@ pipeline {
 						withCredentials([[$class: 'AmazonWebServicesCredentialsBinding', accessKeyVariable: 'AWS_ACCESS_KEY_ID', credentialsId: 'awscrdentials', secretKeyVariable: 'AWS_SECRET_ACCESS_KEY']]) {
 							bat "\"C:\\Program Files\\Amazon\\AWSCLIV2\\aws.exe\" ecs update-service --service ${env.ECS_WEB_API_SERVICE_NAME}  --cluster ${env.ECS_CLUSTER_NAME} --region ${env.AWS_DEFAULT_REGION} --force-new-deployment"
 						}
-						sleep(time:60,unit:"SECONDS")
+						sleep(time:10,unit:"SECONDS")
 						
 						//withCredentials([[$class: 'AmazonWebServicesCredentialsBinding', accessKeyVariable: 'AWS_ACCESS_KEY_ID', credentialsId: '07d39f8a-1812-429b-ac59-ff8a1f6a4314', secretKeyVariable: 'AWS_SECRET_ACCESS_KEY']]) {
 						  //  bat "\"C:\\Program Files\\Amazon\\AWSCLI\\bin\\aws.exe\" ecs update-service --service ${env.ECS_WEB_API_SERVICE_NAME}  --cluster ${env.ECS_CLUSTER_NAME} --region ${env.AWS_DEFAULT_REGION} --desired-count ${env.ECS_DESIRED_TASK_COUNT}"
