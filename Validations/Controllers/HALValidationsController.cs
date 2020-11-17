@@ -26,7 +26,11 @@ namespace Validations.Controllers
             _cfg = cfg;
             _clientFactory = clientFactory;
         }
-
+        [HttpGet]
+        public IActionResult Get()
+        {
+            return Ok("ok");
+        }
         [HttpPost]
         public async Task<IActionResult> Post(ValidationRequest request)
         {
