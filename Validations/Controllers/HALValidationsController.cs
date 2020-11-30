@@ -29,7 +29,7 @@ namespace Validations.Controllers
         [HttpGet]
         public IActionResult Get()
         {
-            return Ok("all Ok");
+            return Ok("Ok");
         }
         [HttpPost]
         public async Task<IActionResult> Post(ValidationRequest request)
