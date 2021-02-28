@@ -31,6 +31,7 @@ cd Validations
 Install the library dependencies.
 
 ```bash
+
 dotnet restore
 ```
 
@@ -66,3 +67,11 @@ docker pull paragsarin/halvalidator:1.0
 ```bash
 docker run -p <host machine port>:80 <imageid>
 ````
+
+![DevOps Tools](./tools.png)
+
+![DevOps Jenkins pipeline CI CD 10000 foot view](./how.png)
+
+![DevOps Jenkins pipeline CI CD details](./details.png)
+
+![Deployment](./deploy.png)
