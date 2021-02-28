@@ -70,7 +70,7 @@ docker run -p <host machine port>:80 <imageid>
 
 ![DevOps Tools](./tools.png)
 
-![DevOps Jenkins pipeline CI CD 10000 foot view](./how.png)
+![DevOps Jenkins pipeline CI CD 10000 foot view](./How.png)
 
 ![DevOps Jenkins pipeline CI CD details](./details.png)
 
