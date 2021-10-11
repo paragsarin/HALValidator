@@ -5,7 +5,7 @@
 This Validator API exposes set of API restful endpoints for validating external HAL+JSON API to ensure their complaince with HAL+JSON resource API format.
 
 ## Usage
-This Validator API exposes set of API restful endpoints for validating external HAL+JSON API to ensure their complaince with HAL+JSON resource API format.
+This Validator API exposes set of API restful endpoints for validating external HAL+JSON API to ensure their compliance with HAL+JSON resource API format.
 
 ## What us HAL
 HAL is a simple format that gives a consistent and easy way to hyperlink between resources in your API.
